@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>M4 Challenge</title>
 </head>
 <body>
+
+    <div class="financial-analysis">
+        <h3>Financial Analysis</h3>
+        <hr class="break-line">
+        <p id="total-months"></p>
+        <p id="total-amount"></p>
+        <p id="avg-change"></p>
+        <p id="greatest-increase"></p>
+        <p id="greatest-decrease"></p>
+    </div>
+    
+
+
     <h1 style="text-align:center;"></h1>
     <script src="script.js"></script>
+
+    <script>
+    document.getElementById("total-months").innerHTML = 'Total Months:' +  totalMonths;
+    document.getElementById("total-amount").innerHTML = 'Total:' + totalAmount;
+    document.getElementById("avg-change").innerHTML = 'Average Change:' + changeProfitLoss.toFixed(2);
+    document.getElementById("greatest-increase").innerHTML = 'Greatest Increase in Profits/Losses: ' + greatestIncreaseDate + ' (' + '$' + increaseTracker + ')';
+    document.getElementById("greatest-decrease").innerHTML = 'Greatest Decrease in Profits/Losses:' + greatestDecreaseDate + ' (' + '$' + decreaseTracker + ')'
+    </script>
 
     
 </body>
