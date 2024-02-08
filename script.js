@@ -89,9 +89,9 @@ var finances = [
 
 const totalMonths = finances.length;
 
-let totalAmount = 0;
-for (let i = 0; i < totalMonths; i++) {
-  totalAmount += finances[i][0];
+var totalAmount = 0;
+for (var i = 0; i < finances.length; i++) {
+    totalAmount += finances[i][1];
 }
 
 let totalChange = 0;
@@ -119,3 +119,4 @@ for (let i = 1; i < totalMonths; i++) {
     greatestDecreaseDate = finances[i][0];
   }
 }
+
